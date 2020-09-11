@@ -8,6 +8,7 @@ Clojure real-world projects:
 * https://github.com/metabase/metabase
 * https://github.com/nasa/Common-Metadata-Repository
 * https://github.com/mtgred/netrunner
+* https://github.com/decimals/sequence
 
 Logging:
 * https://juxt.pro/blog/logging
