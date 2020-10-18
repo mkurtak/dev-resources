@@ -45,16 +45,17 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx brew mvn)
+plugins=(git colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/local/mysql/bin"
-export JAVA_HOME=$(/usr/libexec/java_home)
-export M2_HOME=/usr/local/Cellar/maven/3.3.9/libexec/
-export M2=$M2_HOME/bin
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+    export EDITOR='vim'
+else
+    export EDITOR='emacsclient -t'
+fi
+export VISUAL='emacsclient -c'
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment

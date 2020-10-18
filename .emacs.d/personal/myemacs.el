@@ -5,22 +5,13 @@
                             neotree
                             buffer-move
                             clj-refactor
-                            adoc-mode
-                            groovy-mode
-                            fira-code-mode))
-
-(setq mac-command-modifier 'meta)
-(setq mac-option-modifier 'super)
+                            adoc-mode))
 
 (disable-theme 'zenburn)
 (load-theme 'dracula t)
 
 (require 'flycheck-clj-kondo)
 (require 'clj-refactor)
-(require 'fira-code-mode)
-
-;; List of ligatures to turn off
-(custom-set-variables '(fira-code-mode-disabled-ligatures '("x")))
 
 (autoload 'adoc-mode "adoc-mode" nil t)
 
@@ -34,7 +25,6 @@
 
 (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
 (add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
-(add-hook 'prog-mode-hook 'fira-code-mode)
 (add-hook 'prog-mode-hook 'hs-minor-mode)
 
 ;; Remove lines-trail (different color in lines above 80 chars) from whitespace-mode when editing text files
@@ -53,6 +43,8 @@
 
 ;; Turn off scrollbars
 (toggle-scroll-bar -1)
+;; Turn off menu
+(menu-bar-mode -1)
 
 (delete-selection-mode 1)
 
